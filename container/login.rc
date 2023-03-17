@@ -1,0 +1,39 @@
+# G4, ROOT and lcgcmake
+source /software/geant4/install/bin/geant4.sh
+source /software/root/install/bin/thisroot.sh
+source /software/lcgcmake/install/hsf/x86_64-ubuntu2004-gcc9-opt/setup.sh
+
+# gaudi
+export Gaudi_DIR=/software/gaudi/install
+export PATH=/software/gaudi/build/:$PATH
+export LD_LIBRARY_PATH=/software/gaudi/install/lib/:$LD_LIBRARY_PATH
+export CMAKE_PREFIX_PATH=/software/gaudi/build:$CMAKE_PREFIX_PATH
+
+# WCP RESS
+export EIGEN_DIR=/pioneer/opt/eigen
+export WCPRESS_DIR=/pioneer/opt/wcp_ress
+export LD_LIBRARY_PATH=/pioneer/opt/wcp_ress/lib:$LD_LIBRARY_PATH
+
+# pioneer
+source /pioneer/main/setenv.sh
+export PATH=/pioneer/main/build/MonteCarlo/:$PATH
+
+
+# X11 in singularity
+export DISPLAY=localhost:12.0 # might need to be changed for your machine
+export HOME=/home/`whoami` # need that .Xauthority to work
+export XAUTHORITY=${HOME}/.Xauthority
+
+# other utilities
+export TERM=xterm-256color
+bind '"\e[A":history-search-backward' #PageUp
+bind '"\e[B":history-search-forward' #PageDown
+set autolist
+set autoexpand
+export PS1='[s]$(pwd)\n$'
+alias ls='ls --color'
+alias ll='ls -l'
+list ()
+{
+    echo $1 | tr ':' '\n'
+}
