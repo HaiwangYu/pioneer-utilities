@@ -9,10 +9,12 @@ export PATH=/software/gaudi/build/:$PATH
 export LD_LIBRARY_PATH=/software/gaudi/install/lib/:$LD_LIBRARY_PATH
 export CMAKE_PREFIX_PATH=/software/gaudi/build:$CMAKE_PREFIX_PATH
 
-# WCP RESS
+# EIGEN
 export EIGEN_DIR=/pioneer/opt/eigen
-export WCPRESS_DIR=/pioneer/opt/wcp_ress
-export LD_LIBRARY_PATH=/pioneer/opt/wcp_ress/lib:$LD_LIBRARY_PATH
+
+# RESS
+# export WCPRESS_DIR=/pioneer/opt/wcp_ress
+# export LD_LIBRARY_PATH=/pioneer/opt/wcp_ress/lib:$LD_LIBRARY_PATH
 
 # pioneer
 source /pioneer/main/setenv.sh
