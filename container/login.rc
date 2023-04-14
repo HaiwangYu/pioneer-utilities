@@ -10,11 +10,7 @@ export LD_LIBRARY_PATH=/software/gaudi/install/lib/:$LD_LIBRARY_PATH
 export CMAKE_PREFIX_PATH=/software/gaudi/build:$CMAKE_PREFIX_PATH
 
 # EIGEN
-export EIGEN_DIR=/pioneer/opt/eigen
-
-# RESS
-# export WCPRESS_DIR=/pioneer/opt/wcp_ress
-# export LD_LIBRARY_PATH=/pioneer/opt/wcp_ress/lib:$LD_LIBRARY_PATH
+export EIGEN_DIR=/software/eigen
 
 # pioneer
 source /pioneer/main/setenv.sh
@@ -22,7 +18,7 @@ export PATH=/pioneer/main/build/MonteCarlo/:$PATH
 
 
 # X11 in singularity
-export DISPLAY=localhost:12.0 # might need to be changed for your machine
+export DISPLAY=localhost:12.0 # need to be changed for your machine
 export HOME=/home/`whoami` # need that .Xauthority to work
 export XAUTHORITY=${HOME}/.Xauthority
 
